@@ -1,0 +1,201 @@
+body{
+   font-family: 'Noto Sans','Poppins', sans-serif;
+}
+li{
+   cursor: pointer;
+}
+button{
+   border-radius: 0;
+   border: none;
+   cursor: pointer;
+}
+div {
+   border:1px solid black;
+   margin: 10px;
+}
+header .logo{
+   display: inline-block;
+   vertical-align: 7px; 
+}
+header .logo img{
+   width: 50px;
+   vertical-align: -12px;
+}
+header .logo p{
+   display: inline;
+   font-size: 35px;
+   font-weight: 600;
+}
+header .heading{
+   display: inline-block;
+}
+header .heading p{
+   display: block;
+   opacity: 0.8;
+}
+header .heading p:nth-child(1){
+   color: rgb(0, 136, 255);
+   font-size: 30px;
+   margin: 0;
+   font-weight: 300;
+}
+header .heading p:nth-child(2){
+   margin: 0;
+   font-size: 17px;
+}
+header .greet{
+   float: right;
+}
+header .greet p{
+   display: inline;
+   font-size: 25px;
+   font-weight: 300;
+   opacity: 0.75;
+}
+header .greet p:first-child{
+   color: rgb(0, 136, 255);
+}
+header .greet p{
+   display: inline;
+}
+header .greet img{
+   width: 60px;
+   vertical-align: -4px;
+}
+.mainBody{
+   border: 1px solid rgba(0, 0, 0, 0.089);
+}
+.mainBody .filters{
+   float: left;
+   width: 20%;
+   font-size: 15px;
+}
+.mainBody .directory{
+   float: left;
+   width: 75%;
+}
+.mainBody .directory .note p{
+   margin:0;
+   font-size: 13px;
+   opacity: 0.75;
+}
+.mainBody .directory .note{
+   margin:0 10px ;
+}
+.searchBar , .directory{
+   margin: 0;
+}
+.mainBody .directory .searchBar .searchBox #search{
+   border-radius: 0;
+   border: 1px solid rgba(0, 0, 0, 0.2);
+   padding: 8px;
+   font-size: 12px;
+   opacity: 0.65;
+   vertical-align: middle;
+}
+.mainBody .directory .searchBar .searchBox #search:hover{
+   opacity: 0.9;
+}
+.mainBody .directory .searchBar .searchBox #filter{
+   border-radius: 0;
+   border: 1px solid rgba(0, 0, 0, 0.2);
+   padding: 8px 10px;
+   font-size: 12px;
+   opacity: 0.4;
+   vertical-align: middle;
+   text-align: center;
+   cursor: pointer;
+}
+.mainBody .directory .searchBar .searchBox #filter:hover{
+   opacity: 0.6;
+}
+.mainBody .directory .searchBar .letters{
+   display:flex;
+}
+.mainBody .directory .searchBar .letters button{
+   flex-grow: 1;
+   margin: 20px 1px 10px 1px;
+   height: 35px;
+   background-color: rgba(47, 158, 255, 0.797);
+   color: white;
+   font-weight: 600;
+}
+.mainBody .directory .searchBar .letters button:hover{
+   background-color: rgb(47, 158, 255);
+}
+.mainBody .directory .searchBar .filterdiv{
+   font-size:15px;
+   font-weight: 600;
+   display: inline;
+   margin-left: 50px
+}
+.mainBody .directory .searchBar .searchLabel{
+   font-size:15px;
+   font-weight: 600;
+   display: inline;
+}
+
+.mainBody .directory .searchBar .clearbtn {
+   background-color: rgb(34, 192, 34);
+   color: white;
+   padding: 8px 20px;
+   font-size: 13px;
+   margin-left: 20px;
+   vertical-align: middle;
+}
+.mainBody .directory .searchBar .clearbtn:hover{
+   background-color: rgb(30, 162, 30);
+}
+.mainBody .directory .searchBar .addEmployee{
+   background-color: rgba(47, 158, 255, 0.768);
+   color: white;
+   padding: 8px ;
+   margin-left: 20px;
+   vertical-align: middle;
+   font-weight: 600;
+   float: right;
+   font-size: 15px;
+}
+.mainBody .directory .searchBar .addEmployee:hover{
+   background-color: rgba(47, 158, 255);
+}
+.mainBody .filters ul{
+   list-style: none;
+   padding-left: 3px;
+   margin-top: 5px; 
+} 
+.mainBody .filters ul li{
+   opacity: 0.7;
+}
+.mainBody .filters ul li:hover{
+   opacity: 0.9;
+}
+.mainBody .filters p{
+   font-weight: 600;
+   margin-bottom: 0;
+   margin-top: 17px;
+}
+.empCard{
+   display: inline-block;
+   padding: 7px;
+}
+.empCard img{
+   width: 60px;
+}
+.empCard .detailsDiv{
+   display:inline-block;
+   vertical-align: 7px;
+   margin: 0;
+   padding: 0 5px;
+}
+.empCard p:nth-child(1){
+   font-size: 13px;
+   font-weight: 600;
+   opacity: 0.9;
+   padding-bottom: 2px;
+}
+.empCard p{
+   font-size: 10px;
+   margin: 0;
+   opacity: 0.7;
+}

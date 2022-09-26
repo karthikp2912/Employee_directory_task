@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Directory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="EmployeeDirectory.css">
+    <script type="text/javascript" src="EmployeeDirectory.js"></script>
+    <script src="https://kit.fontawesome.com/66b040a559.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<body onload="filterCount(),renderEmployeeCards()">
+    <header>
+        <div class="logo">
+            <img src="images/saketa-logo.png" alt="">
+            <p>saketa</p>
+        </div>
+        <div class="heading">
+            <p>Employment Directory</p>
+            <p>The ultimate People Directory Experience</p>
+        </div>
+        <div class="greet">
+            <p>Welcome, </p>
+            <p>karthik sai varma </p>
+            <img src="images/profile pic.jpg" alt="">
+        </div>
+    </header>
+    <div class="mainBody">
+        <div class="filters">
+            <div class="departments">
+                <p>Departments</p>
+                <ul>
+                    <li id="itFilter">IT</li>
+                    <li id="hrFilter">Human Resources</li>
+                    <li id="mdFilter">MD</li>
+                    <li id="sFilter">Sales</li>
+                </ul>
+            </div>
+            <div class="offices">
+                <p>Offices</p>
+                <ul>
+                    <li id="seattleFilter">Seattle</li>
+                    <li id="indiaFilter">India</li>
+                </ul>
+            </div>
+            <div class="JobTitles">
+                <p>Job titles</p>
+                <ul>
+                    <li id="spphFilter">SharePoint Practice Head</li>
+                    <li id="netFilter">.Net development lead</li>
+                    <li id="reFilter">Recruiting Expert</li>
+                    <li id="bidFilter">BI Developer</li>
+                    <li id="baFilter">Business analyst</li>
+                </ul>
+            </div>
+        </div>
+        <div class="directory">
+            <div class="searchBar">
+                <div class="letters">
+                    <button>*</button>
+                    <button>A</button>
+                    <button>B</button>
+                    <button>C</button>
+                    <button>D</button>
+                    <button>E</button>
+                    <button>F</button>
+                    <button>G</button>
+                    <button>H</button>
+                    <button>I</button>
+                    <button>J</button>
+                    <button>K</button>
+                    <button>L</button>
+                    <button>M</button>
+                    <button>N</button>
+                    <button>O</button>
+                    <button>P</button>
+                    <button>Q</button>
+                    <button>R</button>
+                    <button>S</button>
+                    <button>T</button>
+                    <button>U</button>
+                    <button>V</button>
+                    <button>W</button>
+                    <button>X</button>
+                    <button>Y</button>
+                    <button>Z</button>
+                </div>
+                <div class="searchBox">
+                    <label for="search" class="searchLabel">Search</label>
+                    <input type="text" id="search" placeholder="Enter any keyword">
+                    <button class="clearbtn">Clear</button>
+                    <div class="filterdiv">
+                        <label for="filter" class="filterLabel">Filter by</label>
+                        <select name="preferedName" id="filter">
+                            <option value="" disabled selected hidden>Preffered Name</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <button class="addEmployee">Add Employee</button>
+                </div>
+                <div class="note">
+                    <p>
+                        <b>Note:</b>Please use the advance filter options to refine the results.
+                    </p>
+                </div>
+            </div>
+            <div id="employeeDiv">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
