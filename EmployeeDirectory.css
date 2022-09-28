@@ -10,7 +10,7 @@ button{
    cursor: pointer;
 }
 div {
-/*    border:1px solid black; */
+   /* border:1px solid black; */
    margin: 10px;
 }
 header .logo{
@@ -26,66 +26,66 @@ header .logo p{
    font-size: 35px;
    font-weight: 600;
 }
-header .heading{
+header .app-Title{
    display: inline-block;
 }
-header .heading p{
+header .app-Title p{
    display: block;
    opacity: 0.8;
 }
-header .heading p:nth-child(1){
+header .app-Title p:nth-child(1){
    color: rgb(0, 136, 255);
    font-size: 30px;
    margin: 0;
    font-weight: 300;
 }
-header .heading p:nth-child(2){
+header .app-Title p:nth-child(2){
    margin: 0;
    font-size: 17px;
 }
-header .greet{
+header .profile{
    float: right;
 }
-header .greet p{
+header .profile p{
    display: inline;
    font-size: 25px;
    font-weight: 300;
    opacity: 0.75;
 }
-header .greet p:first-child{
+header .profile p:first-child{
    color: rgb(0, 136, 255);
 }
-header .greet p{
+header .profile p{
    display: inline;
 }
-header .greet img{
+header .profile img{
    width: 60px;
    vertical-align: -4px;
 }
-.mainBody{
+.body-container{
    border: 1px solid rgba(0, 0, 0, 0.089);
 }
-.mainBody .filters{
+.body-container .left-filters{
    float: left;
    width: 20%;
    font-size: 15px;
 }
-.mainBody .directory{
+.body-container .emp-directory{
    float: left;
    width: 75%;
 }
-.mainBody .directory .note p{
+.body-container .emp-directory .note p{
    margin:0;
    font-size: 13px;
    opacity: 0.75;
 }
-.mainBody .directory .note{
+.body-container .emp-directory .note{
    margin:0 10px ;
 }
-.searchBar , .directory{
+.search-bar , .emp-directory{
    margin: 0;
 }
-.mainBody .directory .searchBar .searchBox #search{
+.body-container .emp-directory .search-bar .search-box #search{
    border-radius: 0;
    border: 1px solid rgba(0, 0, 0, 0.2);
    padding: 8px;
@@ -93,10 +93,10 @@ header .greet img{
    opacity: 0.65;
    vertical-align: middle;
 }
-.mainBody .directory .searchBar .searchBox #search:hover{
+.body-container .emp-directory .search-bar .search-box #search:hover{
    opacity: 0.9;
 }
-.mainBody .directory .searchBar .searchBox #filter{
+.body-container .emp-directory .search-bar .search-box #filter{
    border-radius: 0;
    border: 1px solid rgba(0, 0, 0, 0.2);
    padding: 8px 10px;
@@ -105,37 +105,53 @@ header .greet img{
    vertical-align: middle;
    text-align: center;
    cursor: pointer;
+   width: 150px;
 }
-.mainBody .directory .searchBar .searchBox #filter:hover{
+.body-container .emp-directory .search-bar .search-box #filter:hover{
    opacity: 0.6;
 }
-.mainBody .directory .searchBar .letters{
+.body-container .emp-directory .search-bar .letters{
    display:flex;
 }
-.mainBody .directory .searchBar .letters button{
+.body-container .emp-directory .search-bar .letters input{
+   display: none;
+}
+.body-container .emp-directory .search-bar .letters input:checked + label{
+   background-color: rgba(33, 108, 173, 0.797);
+}
+.body-container .emp-directory .search-bar .letters label{
    flex-grow: 1;
    margin: 20px 1px 10px 1px;
-   height: 35px;
-   background-color: rgba(47, 158, 255, 0.797);
+   padding: 5px 10px 10px 10px;
+   width: 20px;
+   height: 20px;
+   background-color: rgba(47, 172, 255, 0.797);
    color: white;
    font-weight: 600;
+   cursor: pointer;
 }
-.mainBody .directory .searchBar .letters button:hover{
-   background-color: rgb(47, 158, 255);
-}
-.mainBody .directory .searchBar .filterdiv{
+
+
+.body-container .emp-directory .search-bar .filter-div{
    font-size:15px;
    font-weight: 600;
    display: inline;
    margin-left: 50px
 }
-.mainBody .directory .searchBar .searchLabel{
+.body-container .emp-directory .search-bar .filter-div select option{
+   font-size: 13px;
+   text-align: left;
+}
+.body-container .emp-directory .search-bar .filter-div select{
+   opacity: 0.7;
+   padding: 10px;
+}
+.body-container .emp-directory .search-bar .search-label{
    font-size:15px;
    font-weight: 600;
    display: inline;
 }
-
-.mainBody .directory .searchBar .clearbtn {
+.body-container .emp-directory .search-bar .clear-btn {
    background-color: rgb(34, 192, 34);
    color: white;
    padding: 8px 20px;
@@ -143,10 +159,10 @@ header .greet img{
    margin-left: 20px;
    vertical-align: middle;
 }
-.mainBody .directory .searchBar .clearbtn:hover{
+.body-container .emp-directory .search-bar .clear-btn:hover{
    background-color: rgb(30, 162, 30);
 }
-.mainBody .directory .searchBar .addEmployee{
+.body-container .emp-directory .search-bar .add-employee{
    background-color: rgba(47, 158, 255, 0.768);
    color: white;
    padding: 8px ;
@@ -156,21 +172,25 @@ header .greet img{
    float: right;
    font-size: 15px;
 }
-.mainBody .directory .searchBar .addEmployee:hover{
+.body-container .emp-directory .search-bar .add-employee:hover{
    background-color: rgba(47, 158, 255);
 }
-.mainBody .filters ul{
-   list-style: none;
+.body-container .left-filters input{
+   display: none;
+}
+.body-container .left-filters label{
+   display: block;
    padding-left: 3px;
    margin-top: 5px; 
+   cursor: pointer;
 } 
-.mainBody .filters ul li{
+.body-container .left-filters label{
    opacity: 0.7;
 }
-.mainBody .filters ul li:hover{
-   opacity: 0.9;
+.body-container .left-filters input:checked+label{
+   opacity:1;
 }
-.mainBody .filters p{
+.body-container .left-filters p{
    font-weight: 600;
    margin-bottom: 0;
    margin-top: 17px;
@@ -178,15 +198,22 @@ header .greet img{
 .empCard{
    display: inline-block;
    padding: 7px;
+   background-color: rgb(221, 219, 219);
+   width: 200px;
+   cursor: pointer;
 }
 .empCard img{
-   width: 60px;
+   width: 62px;
+   vertical-align: middle;
 }
 .empCard .detailsDiv{
    display:inline-block;
-   vertical-align: 7px;
+   vertical-align: middle;
    margin: 0;
    padding: 0 5px;
+}
+.empCard .detailsDiv p i{
+   opacity: 0.6;
 }
 .empCard p:nth-child(1){
    font-size: 13px;
@@ -199,3 +226,64 @@ header .greet img{
    margin: 0;
    opacity: 0.7;
 }
+#hiddenDetails{
+   display: none;
+}
+#myForm input{
+   border-radius: 0;
+   border: 1px solid rgba(0, 0, 0, 0.2);
+   padding: 8px;
+   font-size: 12px;
+   opacity: 0.65;
+   margin: 3px;
+   width: 40%;
+}
+#myForm label{
+   font-size:15px;
+   font-weight: 600;
+   display: inline;
+   margin: 3px;
+}
+
+#myForm #SubmitBtn{
+   background-color: rgb(34, 192, 34);
+   color: white;
+   padding: 8px 20px;
+   font-size: 15px;
+   margin: 10px;
+}
+#myForm #SubmitBtn:hover{
+   background-color: rgb(30, 162, 30);
+}
+#myForm #CancelBtn{
+   background-color: rgb(205, 8, 8);
+   color: white;
+   padding: 8px 20px;
+   font-size: 15px;
+   margin: 10px;
+}
+#myForm #CancelBtn:hover{
+   background-color: rgb(174, 4, 4);
+}
+#myForm #form p{
+   font-size: 10px;
+   opacity:0.6;
+ margin: 0 10px;
+}
+#addBtn{
+   display: none;
+ }
+.form-popup {
+   display: none;
+   position: fixed;
+   /* bottom: 0; */
+   right: 15px;
+   border: 3px solid #e6e4e4;
+   z-index: 9;
+   text-align: right;
+ }
+ .form-container {
+   max-width: 600px;
+   padding: 10px;
+   background-color: white;
+ }
