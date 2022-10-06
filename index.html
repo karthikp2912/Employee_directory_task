@@ -14,14 +14,14 @@
             <img src="images/saketa-logo.png" alt="">
             <p>saketa</p>
         </div>
-        <div class="app-Title">
+        <div class="app-title">
             <p>Employment Directory</p>
             <p>The ultimate People Directory Experience</p>
         </div>
         <div class="profile">
             <p>Welcome, </p>
-            <p>karthik sai varma </p>
-            <img src="images/profile-pic.jpg" alt="">
+            <p>karthik</p>
+            <img src="images/dp.jpg" alt="">
         </div>
     </header>
     <div class="body-container">
@@ -44,19 +44,20 @@
         </div>
         <div class="emp-directory">
             <div class="search-bar">
-                <div class="letters" id="LettersDiv">
+                <div class="letters" id="lettersDiv">
                     <label><i class="fa-solid fa-user"></i></label>
-                    <!--letters will be displayed here-->
-                    
+                    <!--letters will be displayed here-->    
                 </div>
                 <div class="search-box">
-                    <label for="search" class="search-label">Search</label>
-                    <input type="text" id="search" placeholder="Enter any keyword">
-                    <button class="clear-btn" id="ClearBtn">Clear</button>
+                    <div class="search-div">
+                        <label for="search" class="search-label">Search</label>
+                        <input type="text" id="search" placeholder="Enter any keyword">
+                        <button class="clear-btn" id="clearBtn">Clear</button>
+                    </div>
                     <div class="filter-div">
-                        <label for="filter" class="filter-label">Filter by</label>
-                        <select name="preferedName" id="filter">
-                            <option value="" disabled selected hidden>Preffered Name</option>
+                        <label for="filterBy" class="filter-label">Filter by</label>
+                        <select name="preferedName" id="filterBy">
+                            <option value="" disabled selected>Prefered Name</option>
                             <option value="FirstName">First Name</option>
                             <option value="LastName">Last Name</option>
                             <option value="Email">Email</option>
@@ -65,20 +66,18 @@
                             <option value="Department">Department</option>
                             <option value="PhoneNumber">Phone Number</option>
                             <option value="SkypeID">Skype ID</option>
-                            <option value="None">None</option>
                         </select>
                     </div>
-                    <label for="addBtn" class="add-employee" id="addEmpBtn">Add Employee</label>
+                <label for="addBtn" class="add-employee" id="addEmpBtn">Add Employee</label>
                     <input type="checkbox" id="addBtn">
                 <div class="form-popup" id="myForm">
-                    <form action="" class="form-container" id="form">
+                    <form class="form-container" id="form">
                         <label for="First name">First Name:</label>
-                        <input type="text" placeholder="" name="FirstName" id="FirstName" required>
-                        <p><b>Note:</b>First letter of FirstName should be capital</p>
+                        <input type="text" placeholder="" name="FirstName" id="firstName" required><br>
                         <label for="Last Name">Last Name:</label>
                         <input type="text" placeholder="" name="LastName" required><br>
                         <label for="Email">Email:</label>
-                        <input type="text" placeholder="" name="Email" required><br>
+                        <input type="email" placeholder="" name="Email" required><br>
                         <label for="Job Title">Job Title:</label>
                         <input type="text" placeholder="" name="JobTitle" required><br>
                         <label for="Office">Office:</label>
@@ -86,11 +85,11 @@
                         <label for="Department">Department:</label>
                         <input type="text" placeholder="" name="Department" required><br>
                         <label for="Phone Number">Phone Number:</label>
-                        <input type="text" placeholder="" name="PhoneNumber" required><br>
+                        <input type="number" placeholder="" name="PhoneNumber" required><br>
                         <label for="Skype ID">Skype ID:</label>
                         <input type="text" placeholder="" name="SkypeID" required><br>
-                        <button  id="SubmitBtn">Save</button>
-                        <button type="reset" id="CancelBtn">Cancel</button>
+                        <button type="submit" id="submitBtn">Save</button>
+                        <button type="reset" id="cancelBtn">Cancel</button>
                     </form>
                 </div>
                 </div>
@@ -100,14 +99,12 @@
                     </p>
                 </div>
             </div>
-
-            <div id="employee-div">
+            <div id="employeeDiv">
             </div>
-
         </div>
     </div>
     <script type="text/javascript" src="EmployeeDirectory.js"></script>
-    <!-- <script type="text/javascript" src="test.js"></script> -->
+    <!-- <script type="text/javascript" src="sample.js"></script> -->
     <script src="https://kit.fontawesome.com/66b040a559.js" crossorigin="anonymous"></script>
 </body>
 </html>
