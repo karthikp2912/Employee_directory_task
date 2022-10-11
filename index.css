@@ -1,7 +1,7 @@
 body{
    font-family: 'Noto Sans','Poppins', sans-serif;
 }
-li{
+.left-filters li{
    cursor: pointer;
 }
 button{
@@ -9,55 +9,54 @@ button{
    border: none;
    cursor: pointer;
 }
-div {
+div{
    margin: 8px;
 }
-header .logo{
+.header .logo{
    display: inline-block;
    vertical-align: 7px; 
 }
-header .logo img{
+.header .logo img{
    width: 40px;
    vertical-align: -12px;
 }
-header .logo p{
+.header .logo p{
    display: inline;
    font-size: 30px;
    font-weight: 600;
 }
-header .app-title{
+.header .app-title{
    display: inline-block;
 }
-header .app-title p{
+.header .app-title h2,h5{
    display: block;
-   opacity: 0.8;
+   opacity: 0.6;
 }
-header .app-title p:nth-child(1){
+.header .app-title h2{
    color: rgb(0, 136, 255);
-   font-size: 30px;
    margin: 0;
    font-weight: 300;
 }
-header .app-title p:nth-child(2){
+.header .app-title h5{
    margin: 0;
-   font-size: 17px;
+   font-weight: 400;
 }
 header .profile{
    float: right;
 }
-header .profile p{
+header .profile h3{
    display: inline;
-   font-size: 25px;
    font-weight: 300;
    opacity: 0.75;
 }
-header .profile p:first-child{
+
+.header .profile h3:first-child{
    color: rgb(0, 136, 255);
 }
-header .profile p{
+.header .profile h3{
    display: inline;
 }
-header .profile img{
+.header .profile img{
    width: 60px;
    vertical-align: -4px;
 }
@@ -85,7 +84,7 @@ header .profile img{
 .search-bar , .emp-directory{
    margin: 0;
 }
-.search-div{
+.search-container{
    display: inline;
 }
 .body-container .emp-directory .search-bar .search-box #search{
@@ -129,17 +128,17 @@ header .profile img{
    font-weight: 600;
    cursor: pointer;
 }
-.body-container .emp-directory .search-bar .filter-div{
+.body-container .emp-directory .search-bar .filter-container{
    font-size:15px;
    font-weight: 600;
    display: inline;
    margin-left: 50px
 }
-.body-container .emp-directory .search-bar .filter-div select option{
+.body-container .emp-directory .search-bar .filter-container select option{
    font-size: 13px;
    text-align: left;
 }
-.body-container .emp-directory .search-bar .filter-div select{
+.body-container .emp-directory .search-bar .filter-container select{
    opacity: 0.7;
    padding: 10px;
 }
@@ -230,7 +229,7 @@ header .profile img{
    font-size: 12px;
    opacity: 0.65;
    margin: 3px;
-   width: 40%;
+   width: 60%;
 }
 #myForm label{
    font-size:15px;
@@ -263,20 +262,27 @@ header .profile img{
    opacity:0.6;
  margin: 0 10px;
 }
-#addBtn{
-   display: none;
-}
+
 .form-popup {
-   display: none;
-   right: 15px;
-   border: 3px solid #e6e4e4;
-   z-index: 9;
+   display: none; 
+   position: fixed; 
+   z-index: 1; 
+   left: 0;
+   top: 0;
+   margin:0;
+   width: 100%; 
+   height: 100%; 
    text-align: right;
+   background-color: rgba(0,0,0,0.4); 
 }
 .form-container {
-   max-width: 600px;
-   padding: 10px;
-   background-color: white;
+   background-color: #fefefe;
+   font-size: 15px;
+   border: 1px solid #888;
+   width:40%;
+   margin-top: 10%;
+   margin:auto;
+   padding: 20px 80px;
 }
 .hidden-details{
    display: none; 
@@ -329,7 +335,7 @@ header .profile img{
       padding: 8px 2px; 
       width:110px;
    }
-   .body-container .emp-directory .search-bar .filter-div{
+   .body-container .emp-directory .search-bar .filter-container{
       font-weight: 600;
       display: inline;
       margin-left: 3px
@@ -413,7 +419,7 @@ header .profile img{
    .body-container .emp-directory .search-bar .search-box #filterBy{
       padding: 8px 8px;
    }
-   .body-container .emp-directory .search-bar .filter-div{
+   .body-container .emp-directory .search-bar .filter-container{
       display: inline;
       margin-left: 5px
    }
@@ -443,7 +449,7 @@ header .profile img{
       padding: 8px 5px;
       width:120px;
    }
-   .body-container .emp-directory .filter-div{
+   .body-container .emp-directory .filter-container{
       margin: 5px 0px;
    }
    .body-container .emp-directory .search-bar .clear-btn {
@@ -480,7 +486,7 @@ header .profile img{
    header .profile img{
       width: 40px;
    }
-   .body-container .emp-directory .search-bar .filter-div{
+   .body-container .emp-directory .search-bar .filter-container{
       display: block;  
    }
    #departmentList, #officesList,#jobTitleList{
