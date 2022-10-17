@@ -57,39 +57,84 @@
                         <input type="text" id="search" placeholder="Enter any keyword">
                         <button class="clear-btn" id="clearBtn">Clear</button>
                     </div>
-                    <div class="filter-container">
+                    <div class="filter-container" id="filterContainer">
                         <label for="filterBy" class="filter-label">Filter by</label>
                         <select name="preferedName" id="filterBy">
                             <option value="" disabled selected>Prefered Name</option>
-                            <option value="FirstName">First Name</option>
-                            <option value="LastName">Last Name</option>
-                            <option value="Email">Email</option>
-                            <option value="JobTitle">Job Title</option>
-                            <option value="Office">Office</option>
-                            <option value="Department">Department</option>
-                            <option value="PhoneNumber">Phone Number</option>
-                            <option value="SkypeID">Skype ID</option>
+                            <!-- options will be displayed here -->
                         </select>
                     </div>
                 <button class="add-employee" id="addEmpBtn">Add Employee</button>
                 <div class="form-popup" id="myForm">
                     <form class="form-container" id="form">
-                        <label for="First name">First Name:</label>
-                        <input type="text" placeholder="" name="FirstName" id="firstName" required><br>
-                        <label for="Last Name">Last Name:</label>
-                        <input type="text" placeholder="" name="LastName" required><br>
-                        <label for="Email">Email:</label>
-                        <input type="email" placeholder="" name="Email" required><br>
-                        <label for="Job Title">Job Title:</label>
-                        <input type="text" placeholder="" name="JobTitle" required><br>
-                        <label for="Office">Office:</label>
-                        <input type="text" placeholder="" name="Office" required><br>
-                        <label for="Department">Department:</label>
-                        <input type="text" placeholder="" name="Department" required><br>
-                        <label for="Phone Number">Phone Number:</label>
-                        <input type="number" placeholder="" name="PhoneNumber" required><br>
-                        <label for="Skype ID">Skype ID:</label>
-                        <input type="text" placeholder="" name="SkypeID" required><br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="First name">First Name:</label>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="" name="FirstName" id="FormFirstName" required><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Last Name">Last Name:</label>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="" name="LastName" id="FormLastName" required><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Email">Email:</label>
+                                </td>
+                                <td>
+                                    <input type="email" placeholder="" name="Email" id="FormEmail" required><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Job Title">Job Title:</label>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="" name="JobTitle" id="FormJobTitle" required><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Office">Office:</label>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="" name="Office" id="FormOffice" required><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Department">Department:</label>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="" name="Department" id="FormDepartment"required><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Phone Number">Phone Number:</label>
+                                </td>
+                                <td>
+                                    <input type="number" placeholder="" name="PhoneNumber" id="FormPhoneNumber"required><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Skype ID">Skype ID:</label>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="" name="SkypeID" id="FormSkypeID"required><br>
+                                </td>
+                            </tr>  
+                        </table>
+                        <button type="submit" id="saveChangesBtn">Save Changes</button>
+                        <button type="reset" id="closeBtn">Close</button>
                         <button type="submit" id="submitBtn">Save</button>
                         <button type="reset" id="cancelBtn">Cancel</button>
                     </form>
@@ -103,10 +148,9 @@
             </div>
             <div id="employeeContainer">
             </div>
-            
         </div>
     </div>
-    <script type="text/javascript" src="index.js"></script>
+    <script  type="text/javascript" src="index.js"></script>
     <script src="https://kit.fontawesome.com/66b040a559.js" crossorigin="anonymous"></script>
 </body>
 </html>
