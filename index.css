@@ -1,73 +1,87 @@
 body{
    font-family: 'Noto Sans','Poppins', sans-serif;
 }
+
 .left-filters li{
    cursor: pointer;
 }
+
 button{
    border-radius: 0;
    border: none;
    cursor: pointer;
 }
+
 div{
    margin: 8px;
 }
-.header .logo{
+
+header .logo{
    display: inline-block;
    vertical-align: 7px; 
 }
-.header .logo img{
+
+header .logo img{
    width: 40px;
    vertical-align: -12px;
 }
-.header .logo p{
+header .logo p{
    display: inline;
    font-size: 30px;
    font-weight: 600;
 }
-.header .app-title{
+
+header .app-title{
    display: inline-block;
 }
-.header .app-title h2,h5{
+
+header .app-title h2,h5{
    display: block;
    opacity: 0.6;
 }
-.header .app-title h2{
+
+header .app-title h2{
    color: rgb(0, 136, 255);
    margin: 0;
    font-weight: 300;
 }
-.header .app-title h5{
+header .app-title h5{
    margin: 0;
    font-weight: 400;
 }
 header .profile{
    float: right;
 }
+
 header .profile h3{
    display: inline;
    font-weight: 300;
    opacity: 0.75;
 }
 
-.header .profile h3:first-child{
+header .profile h3:first-child{
    color: rgb(0, 136, 255);
 }
-.header .profile h3{
+
+header .profile h3{
    display: inline;
 }
-.header .profile img{
+
+header .profile img{
    width: 60px;
    vertical-align: -4px;
 }
+
 .body-container{
    border: 1px solid rgba(0, 0, 0, 0.089);
 }
+
 .body-container .left-filters{
    float: left;
    width: 20%;
    font-size: 15px;
 }
+
 .body-container .emp-directory{
    float: left;
    width: 75%;
@@ -78,15 +92,19 @@ header .profile h3{
    font-size: 13px;
    opacity: 0.75;
 }
+
 .body-container .emp-directory .note{
    margin:0 10px ;
 }
+
 .search-bar , .emp-directory{
    margin: 0;
 }
+
 .search-container{
    display: inline;
 }
+
 .body-container .emp-directory .search-bar .search-box #search{
    border: 1px solid rgba(0, 0, 0, 0.2);
    padding: 8px;
@@ -94,9 +112,11 @@ header .profile h3{
    opacity: 0.65;
    vertical-align: middle;
 }
+
 .body-container .emp-directory .search-bar .search-box #search:hover{
    opacity: 0.9;
 }
+
 .body-container .emp-directory .search-bar .search-box #filterBy{
    border: 1px solid rgba(0, 0, 0, 0.2);
    padding: 8px 10px;
@@ -107,46 +127,57 @@ header .profile h3{
    cursor: pointer;
    width: 150px;
 }
+
 .body-container .emp-directory .search-bar .search-box #filterBy:hover{
    opacity: 0.6;
 }
+
 .body-container .emp-directory .search-bar .letters{
    display:inline-block;
    margin-top: 10px;
 }
+
 .body-container .emp-directory .search-bar .letters input{
    display: none;
 }
+
 .body-container .emp-directory .search-bar .letters input:checked + label{
    background-color: rgba(33, 108, 173, 0.797);
 }
+
 .body-container .emp-directory .search-bar .letters label{
    margin: 5px 2px;
+   display: inline-block;
    padding: 5px 10px;
    background-color: rgba(47, 172, 255, 0.797);
    color: white;
    font-weight: 600;
    cursor: pointer;
 }
+
 .body-container .emp-directory .search-bar .filter-container{
    font-size:15px;
    font-weight: 600;
    display: inline;
    margin-left: 50px
 }
+
 .body-container .emp-directory .search-bar .filter-container select option{
    font-size: 13px;
    text-align: left;
 }
+
 .body-container .emp-directory .search-bar .filter-container select{
    opacity: 0.7;
    padding: 10px;
 }
+
 .body-container .emp-directory .search-bar .search-label{
    font-size:15px;
    font-weight: 600;
    display: inline;
 }
+
 .body-container .emp-directory .search-bar .clear-btn {
    background-color: rgb(34, 192, 34);
    color: white;
@@ -155,9 +186,11 @@ header .profile h3{
    margin-left: 20px;
    vertical-align: middle;
 }
+
 .body-container .emp-directory .search-bar .clear-btn:hover{
    background-color: rgb(30, 162, 30);
 }
+
 .body-container .emp-directory .search-bar .add-employee{
    background-color: rgba(47, 158, 255, 0.768);
    color: white;
@@ -168,29 +201,36 @@ header .profile h3{
    float: right;
    font-size: 15px;
 }
+
 .body-container .emp-directory .search-bar .add-employee:hover{
    background-color: rgba(47, 158, 255);
 }
+
 .body-container .left-filters input{
    display: none;
 }
+
 .body-container .left-filters label{
    display: block;
    padding-left: 3px;
    margin-top: 5px; 
    cursor: pointer;
 } 
+
 .body-container .left-filters label{
    opacity: 0.7;
 }
+
 .body-container .left-filters input:checked+label{
    opacity:1;
 }
+
 .body-container .left-filters p{
    font-weight: 600;
    margin-bottom: 0;
    margin-top: 17px;
 }
+
 .emp-card{
    display: inline-block;
    padding: 7px;
@@ -198,19 +238,23 @@ header .profile h3{
    width: 200px;
    cursor: pointer;
 }
+
 .emp-card img{
    width: 62px;
    vertical-align: middle;
 }
+
 .emp-card .detailsDiv{
    display:inline-block;
    vertical-align: middle;
    margin: 0;
    padding: 0 5px;
 }
+
 .emp-card .detailsDiv p i{
    opacity: 0.6;
 }
+
 .emp-card p:nth-child(1){
    font-size: 13px;
    font-weight: 600;
@@ -222,50 +266,54 @@ header .profile h3{
    margin: 0;
    opacity: 0.7;
 }
+
 #myForm input{
    border-radius: 0;
    border: 1px solid rgba(0, 0, 0, 0.2);
    padding: 8px;
-   font-size: 12px;
+   font-size: 2vh;
    opacity: 0.65;
-   margin: 3px;
-   width: 60%;
+   margin: 3px;   
 }
+
 #myForm label{
-   font-size:15px;
+   font-size:2vh;
    font-weight: 600;
    display: inline;
-   margin: 3px;
+   margin: 1vh;
 }
-#myForm #submitBtn{
+
+#myForm #submitBtn, #saveChangesBtn{
    background-color: rgb(34, 192, 34);
    color: white;
-   padding: 8px 20px;
-   font-size: 15px;
+   padding: 8px 10px;
+   font-size: 2vh;
    margin: 10px;
+   display: inline-block;
 }
-#myForm #submitBtn:hover{
+#myForm #submitBtn:hover, #saveChangesBtn:hover{
    background-color: rgb(30, 162, 30);
 }
-#myForm #cancelBtn{
+#myForm #cancelBtn, #closeBtn{
    background-color: rgb(205, 8, 8);
    color: white;
    padding: 8px 20px;
-   font-size: 15px;
+   font-size: 2vh;
    margin: 10px;
 }
-#myForm #cancelBtn:hover{
+#myForm #cancelBtn:hover ,#closeBtn:hover{
    background-color: rgb(174, 4, 4);
 }
 #myForm #form p{
-   font-size: 10px;
+   font-size: 2vh;
    opacity:0.6;
  margin: 0 10px;
 }
 
 .form-popup {
    display: none; 
-   position: fixed; 
+   position: fixed;
+   overflow: scroll; 
    z-index: 1; 
    left: 0;
    top: 0;
@@ -279,56 +327,21 @@ header .profile h3{
    background-color: #fefefe;
    font-size: 15px;
    border: 1px solid #888;
-   width:40%;
-   margin-top: 10%;
-   margin:auto;
-   padding: 20px 80px;
-}
-.hidden-details{
-   display: none; 
-   position: fixed; 
-   z-index: 1; 
-   left: 0;
-   top: 0;
-   margin:0;
-   width: 100%; 
-   height: 100%; 
-   text-align: center;
-   background-color: rgba(0,0,0,0.4); 
-}
-.hidden-details img{
-   width:150px;
-   text-align: center;
-}
-.hidden-content{
-   background-color: #fefefe;
-   font-size: 15px;
-   border: 1px solid #888;
    width:max-content;
    margin-top: 10%;
    margin:auto;
    padding: 20px 80px;
+   text-align: center;
 }
-.hidden-content td:first-child{
-   font-weight: 600;
-   text-align: left;
-   padding: 10px;
-}
-.hidden-content td:last-child{
-   text-align: left;
-}
-.closeContentBtn{
-   background-color: rgb(205, 8, 8);
-   color: white;
-   padding: 8px 20px;
-   font-size: 15px;
+.saveChangesBtn{
+   display: none;
 }
 
 @media screen and (max-width:1070px){
-   header .app-title p:nth-child(1){
+   header .app-title h2{
       font-size: 25px;
    }
-   header .app-title p:nth-child(2){
+   header .app-title h5{
       font-size: 13px;
    }
    .body-container .emp-directory .search-bar .search-box #search ,#filterBy{
@@ -365,13 +378,13 @@ header .profile h3{
    header .logo p{
       font-size: 20px;
    }
-   header .app-title p:nth-child(1){
+   header .app-title h2{
       font-size: 20px;
    }
-   header .app-title p:nth-child(2){
+   header .app-title h5{
       font-size: 10px;
    }
-   header .profile p{
+   header .profile h3{
       font-size: 15px;
    }
    header .profile img{
@@ -409,7 +422,6 @@ header .profile h3{
       display: inline;
       width: 100%;
    }
-   
    .body-container .emp-directory .search-bar .search-box #search{
       padding: 8px 2px; 
    }
@@ -439,6 +451,10 @@ header .profile h3{
    .emp-directory{
       border-top: 1px solid rgba(0, 0, 0, 0.105);
    }
+   .form-container {
+      font-size: 10px;
+      padding: 20px 60px;
+   }
 }
 @media screen and (max-width:730px) {
    .body-container .emp-directory .search-bar .search-box #search{
@@ -461,8 +477,10 @@ header .profile h3{
       padding: 6px 4px;
       font-size: 12px;
    }
+   
 }
-@media screen and (max-width:590px) {
+
+@media screen and (max-width:620px) {
    header .logo{
       margin: 2px;
       vertical-align:10px;
@@ -474,17 +492,17 @@ header .profile h3{
    header .app-title{
       margin:10px 0px;
    }
-   header .app-title p:nth-child(1){
+   header .app-title h2{
       font-size: 23px;
    }
-   header .app-title p:nth-child(2){
+   header .app-title h5{
       font-size: 10px;
    }
-   header .profile p{
-      font-size: 15px;   
+   header .profile h3{
+      font-size: 10px;   
    }
    header .profile img{
-      width: 40px;
+     width: 20px;
    }
    .body-container .emp-directory .search-bar .filter-container{
       display: block;  
@@ -499,9 +517,13 @@ header .profile h3{
    .departments{
       width:30%
    }
+   .body-container .emp-directory .search-bar .letters label{
+      margin: 3px 1px;
+      padding: 3px 6px;
+   }
 }
 @media screen and (max-width:440px){
-   header .profile p{
+   header .profile h3{
       font-size: 10px;
       display: block;
       margin: 0;
@@ -512,10 +534,10 @@ header .profile h3{
    header .profile img{
       display: none; 
    }
-   header .app-title p:nth-child(1){
+   header .app-title h2{
       font-size: 20px;
    }
-   header .app-title p:nth-child(2){
+   header .app-title h5{
       font-size: 7px;
    }
 }
