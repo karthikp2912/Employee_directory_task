@@ -11,8 +11,8 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src="images/saketa-logo.png" alt="">
-            <p>saketa</p>
+            <img src="images/saketa-logo.png"/>
+            <h2>saketa</h2>
         </div>
         <div class="app-title">
             <h2>Employment Directory</h2>
@@ -21,41 +21,41 @@
         <div class="profile">
             <h3>Welcome, </h3>
             <h3>karthik</h3>
-            <img src="images/dp.jpg" alt="">
+            <img src="images/dp.jpg"/>
         </div>
     </header>
     <div class="body-container">
-        <div class="left-filters">
+        <div class="left-filters" onchange="updateLeftFilters();filterEmployees()">
             <div class="departments">
                 <p>Departments</p>
-                <div id="departmentList">
+                <div id="departmentList" >
                     <!--Departments will be displayed here-->
                 </div>
             </div>
             <div class="offices">
                 <p>Offices</p>
-                <div id="officesList">
+                <div id="officesList" >
                     <!--offices will be displayed here-->
                 </div>
             </div>
             <div class="job-titles">
                 <p>Job titles</p>
-                <div id="jobTitleList">
+                <div id="jobTitleList" >
                     <!--Job titles will be displayed here-->
                 </div>
             </div>
         </div>
         <div class="emp-directory">
             <div class="search-bar">
-                <div class="letters" id="lettersContainer">
-                    <label><i class="fa-solid fa-user"></i></label>
+                <div class="letters" id="lettersContainer" onclick="updateSearchFilters();filterEmployees()">
+                    <input name="lettersName" class="letters" value="" type="radio" id="icon"><label value="" for="icon"><i class="fa-solid fa-user"></i></label>
                     <!--letters will be displayed here-->    
                 </div>
-                <div class="search-box">
-                    <div class="search-container">
-                        <label for="search" class="search-label">Search</label>
-                        <input type="text" id="search" placeholder="Enter any keyword">
-                        <button class="clear-btn" id="clearBtn">Clear</button>
+                <div class="search-container">
+                    <div class="search">
+                        <label for="searchKeyWord" class="search-label">Search</label>
+                        <input type="text" id="searchKeyWord" placeholder="Enter any keyword" oninput="updateSearchFilters();filterEmployees()">
+                        <button class="clear-btn" id="clearBtn" onclick=" clearContents()">Clear</button>
                     </div>
                     <div class="filter-container" id="filterContainer">
                         <label for="filterBy" class="filter-label">Filter by</label>
@@ -64,8 +64,14 @@
                             <!-- options will be displayed here -->
                         </select>
                     </div>
-                <button class="add-employee" id="addEmpBtn">Add Employee</button>
-                <div class="form-popup" id="myForm">
+                    <button class="add-employee" id="addEmpBtn" onclick="toggleForm()">Add Employee</button>
+                </div>
+                <div class="note">
+                    <p>
+                        <b>Note:</b>Please use the advance filter options to refine the results.
+                    </p>
+                </div>
+                <div class="form-popup" id="formPopup">
                     <form class="form-container" id="form">
                         <table>
                             <tr>
@@ -73,7 +79,7 @@
                                     <label for="First name">First Name:</label>
                                 </td>
                                 <td>
-                                    <input type="text" placeholder="" name="FirstName" id="FormFirstName" required><br>
+                                    <input type="text" placeholder="" onchange="onChange('firstName', event.target.value)" name="firstName" id="firstName"/>
                                 </td>
                             </tr>
                             <tr>
@@ -81,7 +87,7 @@
                                     <label for="Last Name">Last Name:</label>
                                 </td>
                                 <td>
-                                    <input type="text" placeholder="" name="LastName" id="FormLastName" required><br>
+                                    <input type="text" placeholder="" onchange="onChange('lastName', event.target.value)" name="lastName" id="lastName" />
                                 </td>
                             </tr>
                             <tr>
@@ -89,7 +95,7 @@
                                     <label for="Email">Email:</label>
                                 </td>
                                 <td>
-                                    <input type="email" placeholder="" name="Email" id="FormEmail" required><br>
+                                    <input type="email" placeholder="" onchange="onChange('email', event.target.value)" name="email" id="email" />
                                 </td>
                             </tr>
                             <tr>
@@ -97,7 +103,7 @@
                                     <label for="Job Title">Job Title:</label>
                                 </td>
                                 <td>
-                                    <input type="text" placeholder="" name="JobTitle" id="FormJobTitle" required><br>
+                                    <input type="text" placeholder="" onchange="onChange('jobTitle', event.target.value)" name="jobTitle" id="jobTitle" >
                                 </td>
                             </tr>
                             <tr>
@@ -105,7 +111,7 @@
                                     <label for="Office">Office:</label>
                                 </td>
                                 <td>
-                                    <input type="text" placeholder="" name="Office" id="FormOffice" required><br>
+                                    <input type="text" placeholder="" onchange="onChange('office', event.target.value)" name="office" id="office" >
                                 </td>
                             </tr>
                             <tr>
@@ -113,7 +119,7 @@
                                     <label for="Department">Department:</label>
                                 </td>
                                 <td>
-                                    <input type="text" placeholder="" name="Department" id="FormDepartment"required><br>
+                                    <input type="text" placeholder="" onchange="onChange('department', event.target.value)" name="department" id="department" >
                                 </td>
                             </tr>
                             <tr>
@@ -121,7 +127,7 @@
                                     <label for="Phone Number">Phone Number:</label>
                                 </td>
                                 <td>
-                                    <input type="number" placeholder="" name="PhoneNumber" id="FormPhoneNumber"required><br>
+                                    <input type="number" placeholder="" onchange="onChange('phoneNumber', event.target.value)" name="phoneNumber" id="phoneNumber" >
                                 </td>
                             </tr>
                             <tr>
@@ -129,28 +135,22 @@
                                     <label for="Skype ID">Skype ID:</label>
                                 </td>
                                 <td>
-                                    <input type="text" placeholder="" name="SkypeID" id="FormSkypeID"required><br>
+                                    <input type="text" placeholder="" onchange="onChange('skypeId', event.target.value)" name="skypeId" id="skypeId" >
                                 </td>
-                            </tr>  
+                            </tr>
                         </table>
-                        <button type="submit" id="saveChangesBtn">Save Changes</button>
-                        <button type="reset" id="closeBtn">Close</button>
-                        <button type="submit" id="submitBtn">Save</button>
-                        <button type="reset" id="cancelBtn">Cancel</button>
+                        <button type="button" id="saveBtn" onclick="saveEmpData()">Save</button>
+                        <button type="button" id="closeBtn" onclick="toggleForm()">Close</button>
                     </form>
-                </div>
-                </div>
-                <div class="note">
-                    <p>
-                        <b>Note:</b>Please use the advance filter options to refine the results.
-                    </p>
                 </div>
             </div>
             <div id="employeeContainer">
+                <!-- employee cards will be displayed here -->
             </div>
         </div>
     </div>
     <script  type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="constants.js"></script>
     <script src="https://kit.fontawesome.com/66b040a559.js" crossorigin="anonymous"></script>
 </body>
 </html>
